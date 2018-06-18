@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:textSize="28dp"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_30dp"
+            android:textAllCaps="true"
+            android:text="Posted Jobs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Create"
+            android:textSize="15sp"
+            android:background="@drawable/buttonstyle"
+            />
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:scrollbars="none"
+        android:layout_below="@+id/header"
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/shapeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+    <de.codecrafters.tableview.SortableTableView
+        android:id="@+id/postedjobs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:tableView_columnCount="4"
+        app:tableView_headerElevation="10"
+        app:tableView_headerColor="@color/colorPrimary"
+        />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+</RelativeLayout>

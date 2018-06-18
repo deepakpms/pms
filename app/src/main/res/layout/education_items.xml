@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/white"
+    app:leftEdgeSwipeOffset="0dp"
+    app:rightEdgeSwipeOffset="0dp">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:id="@+id/bottom_wraper"
+        android:layout_width="240dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:drawableLeft="@drawable/ic_edit_white_24dp"
+            android:drawablePadding="10dp"
+            android:id="@+id/Edit"
+            android:layout_width="1dp"
+            android:padding="10dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#009688"
+            android:gravity="center"
+            android:text="Edit"
+            android:layout_marginRight="10dp"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:drawableLeft="@drawable/ic_delete_forever_white_24dp"
+            android:drawablePadding="10dp"
+            android:padding="10dp"
+            android:id="@+id/Delete"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="#F44336"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:id="@+id/institution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Name"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="position"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/completion_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="position"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="They’re not just a problem for you - they’re a real hassle for employers. No matter how well you describe yourself, it is still just words on paper. When your potential boss ‘meets’ you for the first time, whether online or in the flesh, he or she will form their opinion based on what they see - from the most obvious visual clues … to those more personal traits, relevant interests and enthusiasms that make you the lovable, indispensable asset you know yourself to be. No piece of paper can do that for you."
+            />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            />
+    </LinearLayout>
+
+
+
+</com.daimajia.swipe.SwipeLayout>
+

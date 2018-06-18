@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slide1" >
+
+        <ImageView
+            android:id="@+id/close_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|end"
+            android:layout_margin="6dp"
+            android:contentDescription="Close Button"
+            android:padding="5dp"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/close_activity"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/headertxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="EDIT A JOB"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/input_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:inputType="textPersonName"
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Title*" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/reg_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:entries="@array/type"
+                app:ms_arrowSize="16dp"
+                app:ms_floatingLabelColor="@color/yellow"
+                app:ms_floatingLabelText="Category">
+
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/industry_id"
+                    app:ms_arrowColor="#ffb300"
+                    app:ms_arrowSize="16dp"
+                    app:ms_floatingLabelColor="#A9A9A9"
+                    app:ms_floatingLabelText="Select"
+                    app:ms_hint="Please Choose"
+                    app:ms_hintColor="#585858"
+                    app:ms_multiline="true">
+
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/end_date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="End Date" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salary Type"
+                android:textSize="20sp" />
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+                    android:checked="true"
+                    android:id="@+id/annual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="radioButtonClicked"
+                    android:text="Annual" />
+
+                <RadioButton
+                    android:id="@+id/hourly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="radioButtonClicked"
+                    android:text="Hourly" />
+
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_salary_min"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:drawableLeft="@drawable/ic_attach_money_yellow_24dp"
+                        android:id="@+id/salary_min"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Min Salary" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_salary_max"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:drawableLeft="@drawable/ic_attach_money_yellow_24dp"
+                        android:id="@+id/salary_max"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Max Salary" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                android:id="@+id/input_category"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:ms_arrowSize="16dp"
+                app:ms_floatingLabelText="Choose Category"
+
+                app:ms_multiline="true">
+            </fr.ganfra.materialspinner.MaterialSpinner>
+
+            <RelativeLayout
+                android:layout_marginBottom="5dp"
+                android:id="@+id/rskills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/txtSkills"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skills"
+                    android:textSize="14dp"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/txtSkills"
+                    android:id="@+id/statusgroup"
+                    >
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/addskills"
+                        android:layout_centerVertical="true"
+                        >
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            >
+                            <TextView
+                                android:textColor="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/skills"
+                                android:paddingLeft="7dp"
+                                android:layout_centerVertical="true"
+                                android:text="Dosen't Matter"
+                                />
+                        </RelativeLayout>
+                    </ScrollView>
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/addskills"
+                        android:layout_alignParentRight="true"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            >
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:background="@drawable/addmore"
+                                android:id="@+id/image"
+                                />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:hint="Job Description" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_additional"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:id="@+id/additional"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:hint="Required and Desired" />
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_weight="1"
+                android:id="@+id/btn_update"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="Save"
+                android:textSize="15sp"
+                android:background="@drawable/buttonstyle"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

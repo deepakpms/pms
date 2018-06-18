@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:paddingTop="15dp"
+    android:id="@+id/activity_show_video"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/slide1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:id="@+id/groupbutton"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:drawableLeft="@drawable/ic_add_black_24dp"
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:textSize="15sp"
+                android:background="@drawable/buttonstyle"
+                />
+        </LinearLayout>
+
+    <ScrollView
+        android:layout_below="@+id/groupbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <VideoView
+                android:id="@+id/emp_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonPanel"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_play_arrow_black_24dp"
+                    android:id="@+id/play"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Play"
+                    android:layout_marginRight="10dp"
+                    android:textSize="15sp"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+                <Button
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_delete_forever_black_24dp"
+                    android:id="@+id/delete"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Delete"
+                    android:textSize="15sp"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/white"
+                android:id="@+id/empty_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="No Company profile videos"
+                android:visibility="gone" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    </RelativeLayout>
+

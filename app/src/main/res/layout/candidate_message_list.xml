@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        app:cardUseCompatPadding="true"
+        app:elevation="0dp"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="4dp"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:civ_border_color="@android:color/darker_gray"
+                app:civ_border_width="2dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="90dp"
+                android:layout_height="100dp"
+                android:src="@drawable/defaultprofile"
+                android:layout_marginRight="5dip"
+                android:layout_alignParentLeft="true"
+                />
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/message_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/profile_image"
+                android:paddingBottom="5dp"
+                android:text="Viral Android"
+                android:textSize="20sp" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_message_black_24dp"
+                android:drawablePadding="10dp"
+                android:textSize="12dp"
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/message_name"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="Your Application has been Rejected."
+                android:textColor="#d4212020" />
+
+
+            <TextView
+                android:drawablePadding="10dp"
+                android:textSize="12dp"
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/subject"
+                android:layout_toRightOf="@+id/profile_image"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate at lectus vitae ultrices......"
+                android:textColor="#d4212020" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cvvid">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB3UZ7_VM9-rCMaw3PHMnVG-ZtCPBmqi-Y" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemeNoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".common.Signin" />
+        <activity android:name=".activities.candidate.Signup" />
+        <activity android:name=".activities.candidate.Signupmenu" />
+        <activity
+            android:name=".activities.candidate.CandidateMembership"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".activities.candidate.CandidateBasicRegister" />
+        <activity
+            android:name=".activities.employer.EmployerMembership"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".activities.employer.EmployerBasicRegister" />
+        <activity android:name=".activities.institution.InstituteRegister" />
+        <activity android:name=".activities.candidate.ResetPassword" />
+        <activity
+            android:name=".activities.candidate.CandidateProfile"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.UploadVideo"
+            android:theme="@style/AppThemeNoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.candidate.ShowVideo"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddDocument"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddPExperience"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.EditPExperience"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddEducation"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddHobbies"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddLanguage"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.EditEducation"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.EditHobbies"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.EditLanguage"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.ProfilesViews"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.CandidateFavourites"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.SearchJobList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.JobDescription"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.EditDocument"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddCExperience"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.CandidateUpgrade"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.CandidatePayActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.AddCSkills"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.CandidateMessageList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".activities.candidate.EditCExprience" />
+        <activity android:name=".activities.candidate.ViewBCard" />
+        <activity android:name=".activities.candidate.ImageLibraryCandidate" />
+        <activity
+            android:name=".activities.employer.EmployerProfile"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.UploadVideo"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EditCompanyBackground"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.candidate.CheckoutActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".activities.employer.ImageLibraryEmployer" />
+        <activity
+            android:name=".activities.employer.EmployerVideoLikes"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.AddOffice"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EditOffice"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.PostedJobs"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EditJobs"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.SearchCandidateList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.AddEmployerUser"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EditEmployerUser"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.ViewApplications"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.ShortlistApplications"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.IntervieweesApplications"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.InviteforInterview"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EmployerUpgrade"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.ECheckoutActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EQuestionsList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EAnswersList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.ViewEAnswers"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.FilterCandidateList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EmployerFavourites"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.EmployerMessageList"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.employer.AddJob"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".activities.institution.InstituteProfile"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity android:name=".activities.institution.EditSchoolBackground"
+            android:theme="@style/AppThemeNoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:id="@+id/activity_show_video"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slide1" >
+
+        <ImageView
+            android:id="@+id/close_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|end"
+            android:layout_margin="6dp"
+            android:contentDescription="Close Button"
+            android:padding="5dp"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_below="@+id/close_activity"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Play Video"
+                android:textColor="@color/white_greyish"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:background="@color/yellow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <Button android:drawableLeft="@drawable/ic_edit_black_24dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/edit_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Edit"
+                    android:textSize="12sp"
+                    android:background="@drawable/buttonstyle"
+                    />
+                <Button
+                    android:drawableLeft="@drawable/ic_delete_forever_black_24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/delete_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Delete"
+                    android:textSize="12sp"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+                <Button
+                    android:drawableLeft="@drawable/ic_publish_black_24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:id="@+id/publish_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Publish"
+                    android:textSize="12sp"
+                    android:background="@drawable/buttonstyle"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

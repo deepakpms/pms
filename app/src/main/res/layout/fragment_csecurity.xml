@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="15dp"
+    tools:context=".fragments.candidate.CSecurityFragment">
+
+<ScrollView
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Password"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_currentpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/input_currentpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Current Password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="New Password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/input_layout_cpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:inputType="textPassword"
+                android:id="@+id/input_cpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirm New Password" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:text="Profile"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            app:switchPadding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_id"
+            android:textAllCaps="true"
+            android:text="Keep My Profile Private"
+            android:theme="@style/SwithTheme"
+            />
+
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Save Changes"
+            android:textSize="15sp"
+            android:background="@drawable/buttonstyle"
+            />
+
+        <TextView
+            android:text="Profile Upgrade"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            app:switchPadding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_upgrade"
+            android:textAllCaps="true"
+            android:text="Upgrade My Profile"
+            android:theme="@style/SwithTheme"
+            />
+
+        <TextView
+            android:text="Hired"
+            android:textAllCaps="true"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="5dp"/>
+
+        <android.support.v7.widget.SwitchCompat
+            app:switchPadding="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hired_switch"
+            android:textAllCaps="true"
+            android:text="I'm Hired"
+            android:theme="@style/SwithTheme"
+            />
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
+
+</LinearLayout>

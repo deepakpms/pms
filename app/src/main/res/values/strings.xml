@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">CVVID</string>
+    <string name="fnameerr">Enter your Forename</string>
+    <string name="snameerr">Enter your Surname</string>
+    <string name="emailerr">Enter your Email</string>
+    <string name="schnameerr">The school/institution Name field is required.</string>
+    <string name="nopuperr">The number of pupils field is required.</string>
+    <string name="meserr">Enter Message</string>
+    <string name="inemail">Email is invalid</string>
+    <string name="slugerr">A custom url is required for your profile</string>
+    <string name="posterr">The Postcode field is required</string>
+    <string name="oldpassr">Enter Current Password</string>
+    <string name="passerr">Password should have min 6 chars</string>
+    <string name="cpasserr">Password not matched</string>
+    <string name="doberr">Birthday should be like Day/Month/Year, and must be >= 16</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_message">Messages</string>
+    <string name="nav_jobs">Job Search</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_profile">Profile</string>
+    <string name="company">Enter Company Name</string>
+    <string name="institution">Enter Institution Name</string>
+    <string name="hobby">Enter Hobby</string>
+    <string name="language">Enter Language</string>
+
+    <string name="toast_yes">OK</string>
+    <string name="toast_cancel">Cancel</string>
+    <string name="toast_successfully">PDF successfully created.</string>
+    <string name="toast_wait">Images successfully created. Open folder?</string>
+    <string name="toast_successfully_not">An error occurred.</string>
+    <string name="toast_open">Open?</string>
+    <string name="toast_install_app">Please install an app to perform action.</string>
+    <string name="toast_noImage">Please choose an image.</string>
+    <string name="toast_noPDF">Choose or create a PDF file.</string>
+    <string name="toast_noText">Please enter text.</string>
+    <string name="toast_savedImage">Please wait. Saving image.</string>
+    <string name="toast_notAgain">Do not show again</string>
+    <string name="toast_extension">No supported file extension</string>
+    <string name="toast_edited">Image was edited. Saving?</string>
+    <string name="toast_no">No</string>
+    <string name="toast_remove_confirmation">Entry will be removed. OK?</string>
+    <string name="toast_directory">Can\'t open Directory.</string>
+    <string name="toast_files">No files in directory.</string>
+    <string name="toast_picFile">Please choose image file.</string>
+    <string name="toast_pdfFile">Please choose PDF file.</string>
+    <string name="toast_permission">Grant permission. Open settings?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="category">
+        <item>Certificates</item>
+        <item>Qualifications</item>
+        <item>Training skills/courses</item>
+        <item>References</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Permanent</item>
+        <item>Temporary</item>
+        <item>Fixed Term Contract</item>
+    </string-array>
+
+    <string-array name="published">
+        <item>Unpublished</item>
+        <item>Published</item>
+    </string-array>
+
+    <string-array name="distanced">
+        <item>Select Distance</item>
+        <item>Within 5 miles</item>
+        <item>Within 10 miles</item>
+        <item>Within 20 miles</item>
+        <item>Within 30 miles</item>
+        <item>Within 40 miles</item>
+        <item>Within 50 miles</item>
+    </string-array>
+
+    <string-array name="application_status">
+        <item>New Application</item>
+        <item>Shortlist</item>
+        <item>Reject</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+
+
+    <string-array name="level">
+        <item>GCSE</item>
+        <item>A Levels</item>
+        <item>UnderGraduate</item>
+        <item>PostGraduate</item>
+        <item>Vocational</item>
+    </string-array>
+
+    <string-array name="proficiency">
+        <item>Basic</item>
+        <item>Intermediate</item>
+        <item>Expert</item>
+    </string-array>
+
+    <string name="card_header">NFN CARD</string>
+    <string name="card_number_sample">XXXX XXXX XXXX XXXX</string>
+    <string name="card_validity_label">VALID UPTO</string>
+    <string name="card_validity_sample">MM/YY</string>
+    <string name="card_name_sample">CARD HOLDER</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="card_holders_name">Card Holder\'s Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_validity">Expires</string>
+    <string name="card_cvv">CVV/CVC Number</string>
+
+</resources>

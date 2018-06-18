@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.candidate.CandidateProfile">
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:id="@+id/navigation"
+        app:itemIconTint="@color/nav_item_colors"
+        app:itemTextColor="@color/nav_item_colors"
+        android:layout_height="56dp"
+        android:elevation="16dp"
+        app:elevation="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        app:menu="@menu/nav_items_emp">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_above="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/fab"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--app:borderWidth="0dp"-->
+            <!--app:elevation="10dp"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:backgroundTint="@color/pink"-->
+            <!--app:fabSize="normal"-->
+            <!--android:layout_gravity="bottom|end"-->
+            <!--android:scaleType="center"-->
+            <!--android:tint="@android:color/white"-->
+            <!--android:src="@drawable/ic_live_help_black_24dp" />-->
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

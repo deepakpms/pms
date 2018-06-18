@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slide1" >
+
+        <ImageView
+            android:id="@+id/close_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|end"
+            android:layout_margin="6dp"
+            android:contentDescription="Close Button"
+            android:padding="5dp"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/close_activity"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <TextView
+                android:id="@+id/headertxt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Edit Company Background"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_lname"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                >
+
+                <EditText
+                    android:id="@+id/edit_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:hint="Name" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_marginTop="30dp"
+                android:id="@+id/btn_update"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:text="Save"
+                android:textSize="15sp"
+                android:background="@drawable/buttonstyle"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

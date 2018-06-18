@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.cvvid"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //add spinner
+    compile 'com.github.ganfra:material-spinner:1.1.1'
+    compile 'com.android.volley:volley:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.basgeekball:awesome-validation:4.1'
+    compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
+    //swipe
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+    compile 'com.squareup.picasso:picasso:2.5.1'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+//    uploadserver
+    compile 'net.gotev:uploadservice:2.1'
+//    stripe
+    compile('com.stripe:stripe-android:1.0.4@aar') {
+        transitive = true
+    }
+//    gson
+    compile 'com.google.code.gson:gson:2.2.+'
+
+//    snakcbar
+    compile 'com.androidadvance:topsnackbar:1.1.1'
+    compile 'com.google.android.gms:play-services:11.4.0'
+
+    compile 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+
+//    tableview
+    compile 'de.codecrafters.tableview:tableview:2.2.0'
+
+    compile 'com.android.support:multidex:1.0.1'
+
+
+}

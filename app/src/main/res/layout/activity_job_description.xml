@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbars="none"
+    android:layout_marginBottom="10dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.CardView
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activities.candidate.JobDescription">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btn_back"
+            android:textColor="@android:color/black"
+            android:textSize="28dp"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_30dp"
+            android:textAllCaps="true"
+            android:text="Job Description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/industryname"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:text="Enginner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/jobtitle"
+            android:layout_marginTop="5dp"
+            android:textSize="24sp"
+            android:text="British Army"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:drawableRight="@drawable/ic_attach_money_black_24dp"
+            android:id="@+id/salary"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:text="British Army"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:drawableRight="@drawable/ic_location_on_black_24dp"
+            android:id="@+id/location"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="British Army"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:text="Job Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginTop="10dp"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="They’re not just a probcclem for you - they’re a real hassle for employers. No matter how well you describe yourself, it is still just words on paper. When your potential boss ‘meets’ you for the first time, whether online or in the flesh, he or she will form their opinion based on what they see - from the most obvious visual clues … to those more personal traits, relevant interests and enthusiasms that make you the lovable, indispensable asset you know yourself to be. No piece of paper can do that for you."
+            />
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:id="@+id/apply_job"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Apply For This Job"
+            android:textSize="15sp"
+            android:enabled="false"
+            android:background="@drawable/buttonstyle"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+</ScrollView>

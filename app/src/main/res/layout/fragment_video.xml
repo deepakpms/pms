@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    tools:context=".fragments.candidate.VideoFragment"
+    >
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:id="@+id/groupbutton"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <Button
+            android:drawableLeft="@drawable/ic_add_black_24dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create"
+            android:textSize="15sp"
+            android:background="@drawable/buttonstyle"
+            />
+
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+   android:layout_below="@+id/groupbutton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/videorecycler"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </android.support.v7.widget.RecyclerView>
+
+  </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:padding="15dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/slide1" >
+
+        <ImageView
+            android:id="@+id/close_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|end"
+            android:layout_margin="6dp"
+            android:contentDescription="Close Button"
+            android:padding="5dp"
+            android:src="@drawable/close" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_below="@+id/close_activity"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/displayname"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Add Education"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_below="@+id/basic"
+                >
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:layout_below="@+id/close_activity"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    >
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_linst"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:inputType="text"
+                            android:id="@+id/institution"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Institution" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Location"
+                            android:singleLine="true"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_lloc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:inputType="text"
+                            android:id="@+id/field"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Field of Study" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <fr.ganfra.materialspinner.MaterialSpinner
+                            android:id="@+id/level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/level"
+                            app:ms_arrowSize="16dp"
+
+                            app:ms_floatingLabelColor="@color/yellow">
+                        </fr.ganfra.materialspinner.MaterialSpinner>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:background="@color/white"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/cmonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Completion Month" />
+
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_weight="1"
+                                android:id="@+id/completion_month"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/month"
+                                app:ms_arrowSize="16dp"
+                                app:ms_floatingLabelColor="@color/yellow">
+                            </fr.ganfra.materialspinner.MaterialSpinner>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/cyear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Completion Year" />
+
+                            <fr.ganfra.materialspinner.MaterialSpinner
+                                android:layout_weight="1"
+                                android:id="@+id/completion_year"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:ms_arrowSize="16dp"
+                                app:ms_floatingLabelColor="@color/yellow">
+
+                            </fr.ganfra.materialspinner.MaterialSpinner>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+
+                        android:id="@+id/input_lgrade"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:inputType="text"
+                            android:id="@+id/grade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Grade" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_ldesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:gravity="top"
+                            android:inputType="textMultiLine"
+                            android:overScrollMode="always"
+                            android:scrollbarStyle="insideInset"
+                            android:scrollbars="vertical"
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:hint="Description" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Save"
+                        android:background="@drawable/buttonstyle"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:id="@+id/btn_save_pexp"
+                        android:onClick="save"
+                        android:layout_alignParentRight="true"
+                        android:textSize="18dp"
+                        />
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
